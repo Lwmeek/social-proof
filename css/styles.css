@@ -1,0 +1,103 @@
+:root {
+	--clr-vdark-magenta: hsl(300, 43%, 22%);
+	--clr-soft-pink: hsl(333, 80%, 67%);
+	--clr-dark-grayish-magenta: hsl(303, 10%, 53%);
+	--clr-light-grayish-magenta: hsl(300, 24%, 96%);
+	--clr-white: hsl(0, 0%, 100%);
+}
+
+/* General styles */
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.5rem;
+	font-family: "League Spartan", sans-serif;
+}
+
+/* Header */
+.header {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+.header h1 {
+	color: var(--clr-vdark-magenta);
+	max-width: 15ch;
+	margin: 6rem auto 2rem;
+}
+.header p {
+	color: var(--clr-dark-grayish-magenta);
+	max-width: 32ch;
+	margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+	.header h1 {
+		font-size: 4.5rem;
+	}
+	.header p {
+		font-size: 2.5rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.header {
+		text-align: left;
+		width: 50%;
+	}
+	.header h1 {
+		font-size: 3.5rem;
+	}
+	.header p {
+		font-size: 1.8rem;
+		max-width: 40ch;
+	}
+	.header h1,
+	.header p {
+		margin-left: 5rem;
+	}
+}
+
+/* Testimonials */
+
+.testimonials {
+}
+.testimonial-card {
+	background: var(--clr-vdark-magenta);
+	width: 75%;
+	max-width: 32rem;
+	margin: 0 auto;
+	padding: 2.8rem 0 1rem 3rem;
+	border-radius: 10px;
+}
+.user {
+	display: flex;
+	gap: 3rem;
+	justify-content: flex-start;
+	align-items: center;
+}
+.user-pic {
+	border-radius: 100%;
+	height: 5rem;
+}
+.user-name {
+	color: var(--clr-white);
+	margin: 0.2rem 0;
+	font-size: 1.8rem;
+}
+.verified {
+	color: var(--clr-soft-pink);
+	margin: 0;
+	font-weight: 400;
+}
+.testimonial-content {
+	color: var(--clr-white);
+	max-width: 27ch;
+	margin-top: 3rem;
+	font-size: 1.7rem;
+}
+@media screen and (min-width: 768px) {
+	.testimonial-content {
+		max-width: 30ch;
+	}
+}
