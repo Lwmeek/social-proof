@@ -111,6 +111,9 @@ body {
 /* Testimonials */
 
 .testimonials {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 .testimonial-card {
 	background: var(--clr-vdark-magenta);
@@ -149,5 +152,23 @@ body {
 @media screen and (min-width: 768px) {
 	.testimonial-content {
 		max-width: 30ch;
+	}
+	.irene .testimonial-content {
+		max-width: 28ch;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.testimonials {
+		flex-direction: row;
+		min-height: 25rem;
+	}
+	.colton {
+		align-self: flex-start;
+	}
+	.irene {
+		align-self: center;
+	}
+	.anne {
+		align-self: flex-end;
 	}
 }
