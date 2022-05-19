@@ -58,6 +58,56 @@ body {
 	}
 }
 
+/* Ratings */
+
+.rating-col {
+	display: flex;
+	flex-direction: column;
+}
+.rating-card {
+	background: var(--clr-light-grayish-magenta);
+	border-radius: 10px;
+	width: 75%;
+	max-width: 32rem;
+	margin: 1rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+}
+.stars img {
+	margin-right: 0.5rem;
+	margin-bottom: 0.7rem;
+}
+.stats {
+	color: var(--clr-vdark-magenta);
+	font-weight: 700;
+	font-size: 1.7rem;
+}
+@media screen and (min-width: 1024px) {
+	.rating-col {
+		max-width: 50rem;
+	}
+	.rating-card {
+		flex-direction: row;
+		max-width: 40rem;
+		gap: 3rem;
+		justify-content: flex-start;
+		padding: 2rem 1.5rem 1.5rem 3rem;
+		margin: 1rem;
+	}
+	.stars img {
+		margin-bottom: 0;
+	}
+	.guru {
+		align-self: center;
+	}
+	.best-tech {
+		align-self: flex-end;
+	}
+}
+
 /* Testimonials */
 
 .testimonials {
