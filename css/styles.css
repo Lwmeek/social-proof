@@ -12,10 +12,16 @@ html {
 	font-size: 62.5%;
 }
 body {
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	font-family: "League Spartan", sans-serif;
 }
-
+.container {
+	background-image: url(/images/bg-pattern-top-mobile.svg),
+		url(/images/bg-pattern-bottom-mobile.svg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: top left, bottom right;
+	background-size: 100% 17%, 100% 30%;
+}
 /* Header */
 .header {
 	display: flex;
@@ -24,33 +30,45 @@ body {
 }
 .header h1 {
 	color: var(--clr-vdark-magenta);
-	max-width: 15ch;
+	max-width: 12ch;
 	margin: 6rem auto 2rem;
+	letter-spacing: -0.2rem;
 }
 .header p {
 	color: var(--clr-dark-grayish-magenta);
 	max-width: 32ch;
-	margin: 0 auto;
+	margin: 0 auto 2rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
 	.header h1 {
-		font-size: 4.5rem;
+		font-size: 4.2rem;
 	}
 	.header p {
-		font-size: 2.5rem;
+		font-size: 2.1rem;
 	}
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
+	.container {
+		display: grid;
+		height: 100vh;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		align-items: center;
+		background-image: url(/images/bg-pattern-top-desktop.svg),
+			url(/images/bg-pattern-bottom-desktop.svg);
+		background-size: 50% 36%, 80% 80%;
+	}
 	.header {
 		text-align: left;
-		width: 50%;
+		margin-left: 2rem;
 	}
 	.header h1 {
-		font-size: 3.5rem;
+		font-size: 4.2rem;
 	}
 	.header p {
 		font-size: 1.8rem;
-		max-width: 40ch;
+		max-width: 43ch;
+		line-height: 2rem;
 	}
 	.header h1,
 	.header p {
@@ -85,9 +103,13 @@ body {
 	font-weight: 700;
 	font-size: 1.7rem;
 }
-@media screen and (min-width: 1024px) {
+.best-tech {
+	margin-bottom: 5rem;
+}
+@media screen and (min-width: 1000px) {
 	.rating-col {
-		max-width: 50rem;
+		min-width: 55rem;
+		max-width: 55rem;
 	}
 	.rating-card {
 		flex-direction: row;
@@ -120,7 +142,7 @@ body {
 	width: 75%;
 	max-width: 32rem;
 	margin: 0 auto;
-	padding: 2.8rem 0 1rem 3rem;
+	padding: 2.8rem 1.5rem 1rem 3rem;
 	border-radius: 10px;
 }
 .user {
@@ -149,18 +171,20 @@ body {
 	margin-top: 3rem;
 	font-size: 1.7rem;
 }
-@media screen and (min-width: 768px) {
-	.testimonial-content {
-		max-width: 30ch;
-	}
-	.irene .testimonial-content {
-		max-width: 28ch;
-	}
+.anne {
+	margin-bottom: 8rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
 	.testimonials {
 		flex-direction: row;
 		min-height: 25rem;
+		grid-column: span 2;
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.testimonial-content {
+		font-size: 1.8rem;
+		max-width: 30ch;
 	}
 	.colton {
 		align-self: flex-start;
@@ -168,7 +192,17 @@ body {
 	.irene {
 		align-self: center;
 	}
+	.irene .testimonial-content {
+		max-width: 28ch;
+	}
 	.anne {
 		align-self: flex-end;
+		margin-bottom: 0;
+	}
+}
+@media screen and (min-width: 1185px) {
+	.testimonial-content {
+		font-size: 1.8rem;
+		min-width: 30ch;
 	}
 }
